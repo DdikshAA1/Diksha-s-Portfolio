@@ -1,0 +1,401 @@
+Create a one-of-a-kind, premium, futuristic, recruiter-focused personal portfolio website for **DIKSHA**. The portfolio should not resemble a template or a typical student portfolio. It should feel like the digital identity of a future AI Engineer, Data Scientist, and Software Developer.
+
+## Design Philosophy
+
+Blend AI, innovation, elegance, and futuristic technology.
+
+The overall experience should feel like a mix of Apple Vision Pro, Linear, Stripe, and modern AI interfaces.
+
+### Color Palette
+
+Use a unique luxury color scheme instead of ordinary blue:
+
+* Background: Deep Space Black (#060816)
+* Primary Accent: Electric Indigo (#7C3AED)
+* Secondary Accent: Aurora Cyan (#00E5FF)
+* Highlight Accent: Soft Emerald (#00FFA3)
+* Text: Ice White (#F5F7FF)
+* Glass Cards: Transparent with subtle blur and glowing borders
+
+Create smooth gradient combinations using:
+
+* Indigo → Cyan
+* Cyan → Emerald
+* Violet → Deep Blue
+
+Avoid bright neon overload. Keep it elegant and premium.
+
+---
+
+# Advanced Animation Style
+
+Avoid common fade-up animations.
+
+Use:
+
+### 1. Aurora Animated Background
+
+Create slowly moving aurora gradients with subtle particles reacting to mouse movement.
+
+### 2. Floating Neural Network Effect
+
+Connect particles with thin glowing lines resembling AI neural networks.
+
+### 3. Cursor Glow Trail
+
+Create a soft magnetic glow following the cursor.
+
+### 4. Scroll Storytelling
+
+Each section should reveal itself cinematically rather than simply appearing.
+
+### 5. Magnetic Buttons
+
+Buttons should gently attract the cursor and have liquid glow effects.
+
+### 6. Parallax Layers
+
+Background elements should move at different speeds for depth.
+
+### 7. Floating Tech Objects
+
+Python, AI, ML, Data icons should slowly orbit around the hero section.
+
+### 8. Morphing Gradient Blobs
+
+Animated blobs should constantly change shape in the background.
+
+### 9. Smooth Page Transitions
+
+Use Framer Motion with premium easing curves.
+
+### 10. Loading Screen
+
+Display an AI-inspired startup animation with:
+"Initializing Diksha.exe"
+followed by:
+"Loading Intelligence..."
+and then reveal the website.
+
+---
+
+# Hero Section
+
+Display:
+
+DIKSHA
+
+AI & ML Enthusiast | Aspiring Data Scientist | Future Software Engineer
+
+Typing Animation:
+
+• AI & ML Enthusiast
+• Aspiring Data Scientist
+• Software Developer
+• Future AI Engineer
+• Problem Solver
+
+Professional introduction:
+
+"Curious and self-driven Computer Science Engineering (AI & ML) student passionate about Artificial Intelligence, Data Analytics, Software Development, and building impactful technology solutions that solve real-world problems."
+
+Include:
+
+* Animated profile image with rotating glowing ring
+* View Projects button
+* Download Resume button
+* Contact Me button
+* Floating technology icons
+* Animated code snippets around profile image
+* Background neural network effect
+
+---
+
+# About Section
+
+Create a storytelling layout instead of a normal card.
+
+Highlight:
+
+* B.Tech (Hons) CSE (AI & ML)
+* SDGI Global University
+* Expected Graduation: 2028
+* Passion for AI, Machine Learning, Data Analytics, and Software Development
+* Continuous learner
+* Problem solver
+* Strong interest in innovation and emerging technologies
+
+---
+
+# Animated Statistics
+
+Display counters with futuristic circular progress animations:
+
+Technical Skills
+
+Projects Completed
+
+Hackathons Participated
+
+Certifications Earned
+
+Leadership Experiences
+
+---
+
+# Skills Section
+
+Design skill cards with glassmorphism and hover depth effects.
+
+Programming Languages:
+
+Python
+
+C
+
+C++
+
+Web Development:
+
+HTML
+
+CSS
+
+JavaScript
+
+AI & Data:
+
+Machine Learning Concepts
+
+Prompt Engineering
+
+AI Fundamentals
+
+Data Analytics
+
+Tools:
+
+GitHub
+
+Canva
+
+Microsoft Office
+
+Use:
+
+* Animated progress rings
+* Particle effects on hover
+* Glow borders
+* Expandable cards
+
+---
+
+# Featured Projects
+
+Create premium project cards with 3D hover effects.
+
+Include:
+
+Project Image
+
+Tech Stack
+
+GitHub Button
+
+Live Demo Button
+
+Expandable Details Popup
+
+Animated Background
+
+Project:
+
+Fake News Detection System
+Built a machine learning model using Natural Language Processing techniques to identify and classify fake news content accurately.
+
+Technologies:
+
+Python
+
+Machine Learning
+
+NLP
+
+Flask
+
+Automation Libraries
+
+Project Description:
+Built a machine learning model using Natural Language Processing techniques to identify and classify fake news content accurately.
+
+---
+
+# Experience & Leadership Timeline
+
+Design as a futuristic vertical timeline.
+
+CBSOT Summer Internship Program 2026
+
+Campus Ambassador
+
+Launched Ed
+
+Mindenious
+
+Core Organiser — SGU Hackathon 2.0 2026
+
+Volunteer — SGU Hackathon 2025
+
+Participant — ResCon 2025 (Bennett University)
+
+Participant — Smart India Hackathon 2025
+
+Participant — SHE INNOVATES Girls Hackathon (GNIOT)
+
+Animate the timeline with glowing lines and nodes.
+
+---
+
+# Education Section
+
+Create a modern timeline.
+
+Institution:
+
+SDGI Global University
+
+Degree:
+
+B.Tech (Hons) Computer Science & Engineering (AI & ML)
+
+Expected Graduation:
+
+2028
+
+---
+
+# Certifications Section
+
+Create interactive certificate cards.
+
+Certificates:
+
+Canva Design Bootcamp – LetsUpgrade
+
+Prompt Engineering Bootcamp – LetsUpgrade
+
+AI Agents Workshop – Microsoft Learn × K.A.M.A.L.A
+
+Python Programming – GeeksforGeeks
+
+Cards should flip on hover and reveal details.
+
+---
+
+# GitHub Integration
+
+GitHub Profile:
+
+https://github.com/DdikshAA1
+
+Display:
+
+Contribution Heatmap
+
+Pinned Repositories
+
+Coding Activity
+
+---
+
+# Contact Section
+
+Email:
+
+[dikshar1123@gmail.com](mailto:dikshar1123@gmail.com)
+
+GitHub:
+
+https://github.com/DdikshAA1
+
+LinkedIn:
+
+https://www.linkedin.com/in/diksha-rajput-833b85331
+
+Location:
+
+Ghaziabad, Uttar Pradesh, India
+
+Include:
+
+Working Contact Form
+
+Animated Social Icons
+
+Map Section
+
+Email Button
+
+---
+
+# Premium Features
+
+Dark / Light Mode
+
+Scroll Progress Indicator
+
+Back-to-Top Button
+
+Custom Cursor Glow
+
+Floating Tech Elements
+
+AI-Themed Animated Background
+
+SEO Optimization
+
+Accessibility Optimization
+
+Professional Footer
+
+Modern Loading Screen
+
+PWA Support
+
+Smooth Page Transitions
+
+Micro-interactions
+
+Hidden Easter Eggs
+
+---
+
+# Technical Stack
+
+React.js
+
+Tailwind CSS
+
+Framer Motion
+
+React Icons
+
+Three.js
+
+GSAP
+
+TypeScript
+
+Responsive Component Architecture
+
+---
+
+# Final Requirement
+
+The portfolio must feel like a premium digital experience rather than a website.
+
+It should instantly impress recruiters, hiring managers, and hackathon judges.
+
+Avoid generic templates, ordinary cards, or basic animations.
+
+Make it cinematic, immersive, elegant, futuristic, memorable, and worthy of a top AI Engineer and Software Developer.
