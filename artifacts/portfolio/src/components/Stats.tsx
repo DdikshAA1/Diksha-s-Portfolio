@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useCountUp } from '@/hooks/useCountUp';
 
-const ease = [0.25, 0.46, 0.45, 0.94];
+const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 const statData = [
   { label: 'Technical Skills', value: 10, suffix: '+' },

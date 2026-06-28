@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, ExternalLink, X } from 'lucide-react';
 
-const ease = [0.25, 0.46, 0.45, 0.94];
+const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 const projects = [
   {

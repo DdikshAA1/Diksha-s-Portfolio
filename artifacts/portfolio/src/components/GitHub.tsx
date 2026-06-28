@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Github, Star, GitFork, BookOpen } from 'lucide-react';
 
-const ease = [0.25, 0.46, 0.45, 0.94];
+const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 export default function GitHub() {
   // Generate fake heatmap data

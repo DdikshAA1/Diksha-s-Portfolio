@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Mail, MapPin, Send, Github, Linkedin, ExternalLink, CheckCircle, AlertCircle } from 'lucide-react';
 import { useMagneticButton } from '@/hooks/useMagneticButton';
 
-const ease = [0.25, 0.46, 0.45, 0.94];
+const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 function MagneticIcon({ href, icon: Icon }: { href: string, icon: any }) {
   const ref = useMagneticButton(20);
