@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Moon, Sun } from 'lucide-react';
+import { Menu, X, Moon, Sun, Github, Linkedin, Mail } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
 const links = [
@@ -46,7 +46,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {links.map((link) => (
             <a
               key={link.name}
@@ -58,13 +58,44 @@ export default function Navbar() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
             </a>
           ))}
-          <button
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="p-2 rounded-full hover:bg-white/5 transition-colors"
-            data-testid="button-theme-toggle"
-          >
-            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
+
+          <div className="flex items-center gap-1 pl-4 border-l border-white/10">
+            <a
+              href="https://github.com/DdikshAA1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full text-muted-foreground hover:text-white hover:bg-white/5 transition-all"
+              title="GitHub"
+              data-testid="link-navbar-github"
+            >
+              <Github size={17} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/diksha-rajput-833b85331"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full text-muted-foreground hover:text-white hover:bg-white/5 transition-all"
+              title="LinkedIn"
+              data-testid="link-navbar-linkedin"
+            >
+              <Linkedin size={17} />
+            </a>
+            <a
+              href="mailto:dikshar1123@gmail.com"
+              className="p-2 rounded-full text-muted-foreground hover:text-white hover:bg-white/5 transition-all"
+              title="Email"
+              data-testid="link-navbar-email"
+            >
+              <Mail size={17} />
+            </a>
+            <button
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              className="p-2 rounded-full hover:bg-white/5 transition-colors text-muted-foreground hover:text-white"
+              data-testid="button-theme-toggle"
+            >
+              {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Toggle */}

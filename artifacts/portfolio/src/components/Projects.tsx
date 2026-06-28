@@ -12,7 +12,7 @@ const projects = [
     fullDesc: "Built a robust machine learning model using Natural Language Processing (NLP) techniques to identify and classify fake news content accurately. The system processes text data, extracts meaningful features, and applies classification algorithms to determine credibility.",
     tech: ["Python", "Machine Learning", "NLP", "Flask", "Automation"],
     github: "https://github.com/DdikshAA1",
-    demo: "#",
+    demo: null,
     gradient: "from-primary/40 via-secondary/20 to-background"
   },
   {
@@ -22,7 +22,7 @@ const projects = [
     fullDesc: "An exploratory project to visualize complex datasets. Utilizes modern web technologies to render charts and graphs that help in making data-driven decisions quickly and effectively.",
     tech: ["JavaScript", "HTML/CSS", "Data Analytics"],
     github: "https://github.com/DdikshAA1",
-    demo: "#",
+    demo: null,
     gradient: "from-secondary/40 via-accent/20 to-background"
   },
   {
@@ -32,7 +32,7 @@ const projects = [
     fullDesc: "A sleek, responsive chat interface demonstrating advanced prompt engineering techniques to generate accurate, context-aware responses from language models.",
     tech: ["Python", "Prompt Engineering", "API Integration"],
     github: "https://github.com/DdikshAA1",
-    demo: "#",
+    demo: null,
     gradient: "from-accent/40 via-primary/20 to-background"
   }
 ];
@@ -107,13 +107,33 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
             )}
           </div>
 
-          <div className="flex items-center gap-4 mt-auto">
-            <a href={project.github} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="p-2 rounded-full border border-white/10 hover:bg-white/10 transition-colors text-white">
-              <Github size={18} />
+          <div className="flex items-center gap-3 mt-auto">
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/15 hover:bg-white/10 hover:border-primary/50 transition-all text-white text-xs font-mono"
+              data-testid={`button-github-${project.id}`}
+            >
+              <Github size={14} /> Code
             </a>
-            <a href={project.demo} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="p-2 rounded-full border border-white/10 hover:bg-white/10 transition-colors text-white">
-              <ExternalLink size={18} />
-            </a>
+            {project.demo ? (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center gap-2 px-4 py-2 rounded-full border border-secondary/30 hover:bg-secondary/10 hover:border-secondary/60 transition-all text-secondary text-xs font-mono"
+                data-testid={`button-demo-${project.id}`}
+              >
+                <ExternalLink size={14} /> Live Demo
+              </a>
+            ) : (
+              <span className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/5 text-white/30 text-xs font-mono cursor-default select-none">
+                <ExternalLink size={14} /> Demo Soon
+              </span>
+            )}
           </div>
         </div>
       </motion.div>
@@ -167,22 +187,30 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
                 </div>
 
                 <div className="flex items-center gap-4 pt-6 border-t border-white/10">
-                  <a 
-                    href={project.github} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-medium hover:bg-white/90 transition-colors"
+                    data-testid={`button-popup-github-${project.id}`}
                   >
-                    <Github size={18} /> View Source
+                    <Github size={18} /> View Code
                   </a>
-                  <a 
-                    href={project.demo} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 text-white font-medium hover:bg-white/5 transition-colors"
-                  >
-                    <ExternalLink size={18} /> Live Demo
-                  </a>
+                  {project.demo ? (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-6 py-3 rounded-full border border-secondary/40 text-secondary font-medium hover:bg-secondary/10 transition-colors"
+                      data-testid={`button-popup-demo-${project.id}`}
+                    >
+                      <ExternalLink size={18} /> Live Demo
+                    </a>
+                  ) : (
+                    <span className="flex items-center gap-2 px-6 py-3 rounded-full border border-white/10 text-white/30 font-medium cursor-default">
+                      <ExternalLink size={18} /> Demo Coming Soon
+                    </span>
+                  )}
                 </div>
               </div>
             </motion.div>

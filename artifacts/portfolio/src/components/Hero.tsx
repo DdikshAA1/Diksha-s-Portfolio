@@ -13,18 +13,28 @@ const roles = [
 
 const ease = [0.25, 0.46, 0.45, 0.94];
 
-function MagneticBtn({ children, className, href }: { children: React.ReactNode, className?: string, href?: string }) {
+function MagneticBtn({
+  children, className, href, download, target
+}: {
+  children: React.ReactNode;
+  className?: string;
+  href?: string;
+  download?: string;
+  target?: string;
+}) {
   const ref = useMagneticButton(30);
-  const Tag = href ? 'a' : 'button';
   return (
-    <Tag
+    <a
       ref={ref as any}
-      href={href}
-      className={`px-8 py-4 rounded-full font-medium transition-all duration-300 inline-flex items-center justify-center ${className}`}
+      href={href ?? '#'}
+      download={download}
+      target={target}
+      rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+      className={`px-8 py-4 rounded-full font-medium transition-all duration-300 inline-flex items-center justify-center gap-2 ${className}`}
       style={{ boxShadow: '0 0 20px rgba(124, 58, 237, 0.0)' }}
     >
       {children}
-    </Tag>
+    </a>
   );
 }
 
@@ -81,8 +91,13 @@ export default function Hero() {
             <MagneticBtn href="#contact" className="glass-card hover:border-secondary/50 hover:shadow-[0_0_30px_rgba(0,229,255,0.2)]">
               Contact Me
             </MagneticBtn>
-            <MagneticBtn className="border border-white/10 hover:bg-white/5">
-              Download Resume
+            <MagneticBtn
+              href="/Diksha_Resume.html"
+              download="Diksha_Resume.html"
+              className="border border-white/10 hover:bg-white/5 hover:border-accent/50 hover:shadow-[0_0_20px_rgba(0,255,163,0.2)]"
+              data-testid="button-download-resume"
+            >
+              ⬇ Download Resume
             </MagneticBtn>
           </div>
         </motion.div>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diksha Rajput — Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8f9fa;
+      color: #1a1a2e;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 860px;
+      margin: 32px auto;
+      background: #fff;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.12);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #060816 0%, #1a0533 50%, #060816 100%);
+      padding: 40px 48px 36px;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 200px; height: 200px;
+      background: radial-gradient(circle, rgba(0,229,255,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: -30px; left: 30%;
+      width: 150px; height: 150px;
+      background: radial-gradient(circle, rgba(124,58,237,0.2) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .header-content { position: relative; z-index: 1; }
+    .name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      background: linear-gradient(135deg, #7C3AED, #00E5FF, #00FFA3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 6px;
+    }
+    .title {
+      color: rgba(255,255,255,0.75);
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
+    }
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .contacts a, .contacts span {
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.2s;
+    }
+    .contacts a:hover { color: #00E5FF; }
+    .dot {
+      width: 4px; height: 4px;
+      background: rgba(124,58,237,0.7);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    /* Body */
+    .body { display: grid; grid-template-columns: 260px 1fr; }
+
+    /* Sidebar */
+    .sidebar {
+      background: #f4f3ff;
+      padding: 32px 24px;
+      border-right: 1px solid #ede9fe;
+    }
+
+    /* Main */
+    .main { padding: 32px 36px; }
+
+    /* Section */
+    .section { margin-bottom: 28px; }
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #7C3AED;
+      margin-bottom: 14px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #ede9fe;
+    }
+
+    /* Education */
+    .edu-item { margin-bottom: 12px; }
+    .edu-deg {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #1a1a2e;
+      line-height: 1.4;
+    }
+    .edu-school {
+      font-size: 12.5px;
+      color: #4c1d95;
+      font-weight: 500;
+    }
+    .edu-date {
+      font-size: 11.5px;
+      color: #6b7280;
+      margin-top: 2px;
+    }
+
+    /* Skills */
+    .skill-group { margin-bottom: 14px; }
+    .skill-group-name {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: #6b21a8;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .skill-tag {
+      background: #ede9fe;
+      color: #4c1d95;
+      font-size: 11.5px;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 20px;
+      border: 1px solid #ddd6fe;
+    }
+
+    /* Certs sidebar */
+    .cert-item {
+      margin-bottom: 10px;
+      padding: 8px 10px;
+      background: #fff;
+      border-radius: 8px;
+      border-left: 3px solid #7C3AED;
+    }
+    .cert-name { font-size: 12px; font-weight: 600; color: #1a1a2e; }
+    .cert-issuer { font-size: 11px; color: #6b7280; margin-top: 1px; }
+
+    /* Links sidebar */
+    .link-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: #4c1d95;
+      font-size: 12.5px;
+      font-weight: 500;
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .link-icon {
+      width: 24px; height: 24px;
+      background: #ede9fe;
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 12px;
+    }
+
+    /* Experience */
+    .exp-item { margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid #f3f4f6; }
+    .exp-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 3px; }
+    .exp-role { font-size: 14px; font-weight: 700; color: #1a1a2e; }
+    .exp-date { font-size: 11.5px; color: #6b7280; font-weight: 500; white-space: nowrap; }
+    .exp-org { font-size: 12.5px; color: #7C3AED; font-weight: 500; margin-bottom: 4px; }
+    .exp-desc { font-size: 12.5px; color: #4b5563; line-height: 1.6; }
+
+    /* Projects */
+    .proj-item { margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid #f3f4f6; }
+    .proj-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .proj-title { font-size: 14px; font-weight: 700; color: #1a1a2e; margin-bottom: 3px; }
+    .proj-tech { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 5px; }
+    .proj-tech-tag {
+      background: #ede9fe;
+      color: #4c1d95;
+      font-size: 10.5px;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 20px;
+    }
+    .proj-desc { font-size: 12.5px; color: #4b5563; line-height: 1.6; }
+
+    /* Print */
+    .print-btn {
+      display: block;
+      text-align: center;
+      padding: 12px 32px;
+      background: linear-gradient(135deg, #7C3AED, #00E5FF);
+      color: #fff;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 0 auto 24px;
+      text-decoration: none;
+      width: fit-content;
+      letter-spacing: 0.5px;
+    }
+    .print-btn:hover { opacity: 0.9; }
+
+    @media print {
+      body { background: white; }
+      .page { margin: 0; box-shadow: none; border-radius: 0; }
+      .no-print { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="no-print" style="text-align:center; padding: 20px 0 0;">
+    <button class="print-btn" onclick="window.print()">⬇ Save as PDF (Ctrl+P → Save as PDF)</button>
+  </div>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="header-content">
+        <div class="name">DIKSHA RAJPUT</div>
+        <div class="title">B.Tech CSE (AI &amp; ML) · AI &amp; ML Enthusiast · Aspiring Data Scientist · Future Software Engineer</div>
+        <div class="contacts">
+          <a href="mailto:dikshar1123@gmail.com">✉ dikshar1123@gmail.com</a>
+          <span class="dot"></span>
+          <a href="https://github.com/DdikshAA1" target="_blank">⌥ github.com/DdikshAA1</a>
+          <span class="dot"></span>
+          <a href="https://www.linkedin.com/in/diksha-rajput-833b85331" target="_blank">in linkedin.com/in/diksha-rajput-833b85331</a>
+          <span class="dot"></span>
+          <span>📍 Ghaziabad, Uttar Pradesh, India</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="body">
+
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+
+        <!-- Education -->
+        <div class="section">
+          <div class="section-title">Education</div>
+          <div class="edu-item">
+            <div class="edu-deg">B.Tech (Hons) CSE — AI &amp; ML</div>
+            <div class="edu-school">SDGI Global University</div>
+            <div class="edu-date">Expected Graduation: 2028</div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="section">
+          <div class="section-title">Skills</div>
+          <div class="skill-group">
+            <div class="skill-group-name">Languages</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">C</span>
+              <span class="skill-tag">C++</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">Web Development</div>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">AI &amp; Data</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Machine Learning</span>
+              <span class="skill-tag">NLP</span>
+              <span class="skill-tag">Prompt Engineering</span>
+              <span class="skill-tag">Data Analytics</span>
+              <span class="skill-tag">AI Fundamentals</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-name">Tools</div>
+            <div class="skill-tags">
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">Canva</span>
+              <span class="skill-tag">MS Office</span>
+              <span class="skill-tag">Flask</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="section">
+          <div class="section-title">Certifications</div>
+          <div class="cert-item">
+            <div class="cert-name">Canva Design Bootcamp</div>
+            <div class="cert-issuer">LetsUpgrade</div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-name">Prompt Engineering Bootcamp</div>
+            <div class="cert-issuer">LetsUpgrade</div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-name">AI Agents Workshop</div>
+            <div class="cert-issuer">Microsoft Learn × K.A.M.A.L.A</div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-name">Python Programming</div>
+            <div class="cert-issuer">GeeksforGeeks</div>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="section">
+          <div class="section-title">Links</div>
+          <a class="link-item" href="https://github.com/DdikshAA1" target="_blank">
+            <div class="link-icon">GH</div>
+            github.com/DdikshAA1
+          </a>
+          <a class="link-item" href="https://www.linkedin.com/in/diksha-rajput-833b85331" target="_blank">
+            <div class="link-icon">in</div>
+            linkedin.com/in/diksha-rajput-833b85331
+          </a>
+          <a class="link-item" href="mailto:dikshar1123@gmail.com">
+            <div class="link-icon">✉</div>
+            dikshar1123@gmail.com
+          </a>
+        </div>
+
+      </div>
+
+      <!-- MAIN -->
+      <div class="main">
+
+        <!-- Summary -->
+        <div class="section">
+          <div class="section-title">About Me</div>
+          <p style="font-size:13px; color:#4b5563; line-height:1.8;">
+            Curious and self-driven Computer Science Engineering (AI &amp; ML) student passionate about Artificial Intelligence, Data Analytics, Software Development, and building impactful technology solutions. Strong interest in innovation and emerging technologies with a continuous learner mindset.
+          </p>
+        </div>
+
+        <!-- Projects -->
+        <div class="section">
+          <div class="section-title">Projects</div>
+          <div class="proj-item">
+            <div class="proj-title">Fake News Detection System</div>
+            <div class="proj-tech">
+              <span class="proj-tech-tag">Python</span>
+              <span class="proj-tech-tag">Machine Learning</span>
+              <span class="proj-tech-tag">NLP</span>
+              <span class="proj-tech-tag">Flask</span>
+              <span class="proj-tech-tag">Automation</span>
+            </div>
+            <div class="proj-desc">
+              Built a machine learning model using Natural Language Processing techniques to identify and classify fake news content accurately. The system processes text data, extracts meaningful features, and applies classification algorithms to determine credibility.
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience & Leadership -->
+        <div class="section">
+          <div class="section-title">Experience &amp; Leadership</div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-role">Summer Intern</div>
+              <div class="exp-date">2026</div>
+            </div>
+            <div class="exp-org">CBSOT Summer Internship Program</div>
+            <div class="exp-desc">Gained industry exposure and practical skills during a structured summer internship program.</div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-role">Campus Ambassador</div>
+              <div class="exp-date">2025–26</div>
+            </div>
+            <div class="exp-org">Launched Ed</div>
+            <div class="exp-desc">Promoted the platform across campus, organized events, and drove student engagement and awareness.</div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-role">Campus Ambassador</div>
+              <div class="exp-date">2025–26</div>
+            </div>
+            <div class="exp-org">Mindenious</div>
+            <div class="exp-desc">Served as a student brand representative, fostering community engagement and platform adoption.</div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-role">Core Organiser</div>
+              <div class="exp-date">2026</div>
+            </div>
+            <div class="exp-org">SGU Hackathon 2.0</div>
+            <div class="exp-desc">Led end-to-end organization of a major university-level hackathon, managing logistics, participant experience, and team coordination.</div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-role">Volunteer</div>
+              <div class="exp-date">2025</div>
+            </div>
+            <div class="exp-org">SGU Hackathon 2025</div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-role">Participant</div>
+              <div class="exp-date">2025</div>
+            </div>
+            <div class="exp-org">ResCon 2025 — Bennett University · Smart India Hackathon 2025 · SHE INNOVATES Girls Hackathon (GNIOT)</div>
+            <div class="exp-desc">Competed in multiple national-level hackathons, developing solutions across AI, data, and software domains.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
