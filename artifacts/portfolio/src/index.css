@@ -94,18 +94,77 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-:root, .dark {
+:root {
+  --button-outline: rgba(0,0,0, .10);
+  --badge-outline: rgba(0,0,0, .05);
+
+  --opaque-button-border-intensity: 9;
+
+  --elevate-1: rgba(0,0,0, .04);
+  --elevate-2: rgba(0,0,0, .09);
+
+  --background: 0 0% 100%;
+  --foreground: 230 60% 3%;
+
+  --border: 220 13% 91%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 230 60% 3%;
+  --card-border: 220 13% 91%;
+
+  --sidebar: 0 0% 98%;
+  --sidebar-foreground: 230 60% 3%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-primary: 262 83% 58%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 220 14% 96%;
+  --sidebar-accent-foreground: 230 60% 3%;
+  --sidebar-ring: 262 83% 58%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 230 60% 3%;
+  --popover-border: 220 13% 91%;
+
+  --primary: 262 83% 58%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 191 100% 40%;
+  --secondary-foreground: 0 0% 100%;
+
+  --muted: 220 14% 96%;
+  --muted-foreground: 220 8% 46%;
+
+  --accent: 157 100% 35%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 220 30% 96%;
+
+  --input: 220 13% 91%;
+  --ring: 262 83% 58%;
+  --chart-1: 262 83% 58%;
+  --chart-2: 191 100% 40%;
+  --chart-3: 157 100% 35%;
+  --chart-4: 280 83% 58%;
+  --chart-5: 220 83% 58%;
+
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --glass-border-hover: rgba(124, 58, 237, 0.4);
+  --glass-shadow-hover: rgba(124, 58, 237, 0.1);
+}
+
+.dark {
   --button-outline: rgba(255,255,255, .10);
   --badge-outline: rgba(255,255,255, .05);
 
-  --opaque-button-border-intensity: 9;  /* In terms of percentages */
+  --opaque-button-border-intensity: 9;
 
-  /* Backgrounds applied on top of other backgrounds when hovered/active */
   --elevate-1: rgba(255,255,255, .04);
   --elevate-2: rgba(255,255,255, .09);
 
-  --background: 230 60% 3%;   /* #060816 */
-  --foreground: 220 30% 96%;  /* #F5F7FF */
+  --background: 230 60% 3%;
+  --foreground: 220 30% 96%;
 
   --border: 262 50% 20%;
 
@@ -126,16 +185,16 @@
   --popover-foreground: 220 30% 96%;
   --popover-border: 262 50% 25%;
 
-  --primary: 262 83% 58%;     /* #7C3AED */
+  --primary: 262 83% 58%;
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 191 100% 50%;  /* #00E5FF */
+  --secondary: 191 100% 50%;
   --secondary-foreground: 230 60% 3%;
 
   --muted: 230 30% 15%;
   --muted-foreground: 220 20% 70%;
 
-  --accent: 157 100% 50%;     /* #00FFA3 */
+  --accent: 157 100% 50%;
   --accent-foreground: 230 60% 3%;
 
   --destructive: 0 84% 60%;
@@ -148,6 +207,12 @@
   --chart-3: 157 100% 50%;
   --chart-4: 280 83% 58%;
   --chart-5: 220 83% 58%;
+
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(0, 229, 255, 0.15);
+  --glass-border-hover: rgba(124, 58, 237, 0.4);
+  --glass-shadow-hover: rgba(124, 58, 237, 0.2);
+}
 
   --app-font-sans: 'Inter', sans-serif;
   --app-font-serif: 'Space Grotesk', sans-serif;
@@ -199,16 +264,16 @@
 
 @layer utilities {
   .glass-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(0, 229, 255, 0.15);
+    background: var(--glass-bg, rgba(255, 255, 255, 0.03));
+    border: 1px solid var(--glass-border, rgba(0, 229, 255, 0.15));
     backdrop-filter: blur(20px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
   }
   
   .glass-card:hover {
-    border: 1px solid rgba(124, 58, 237, 0.4);
-    box-shadow: 0 0 20px rgba(124, 58, 237, 0.2);
+    border: 1px solid var(--glass-border-hover, rgba(124, 58, 237, 0.4));
+    box-shadow: 0 0 20px var(--glass-shadow-hover, rgba(124, 58, 237, 0.2));
   }
   
   .text-gradient {
