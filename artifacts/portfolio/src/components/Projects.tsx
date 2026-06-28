@@ -11,7 +11,7 @@ const projects = [
     shortDesc: "Machine learning model to identify and classify fake news.",
     fullDesc: "Built a robust machine learning model using Natural Language Processing (NLP) techniques to identify and classify fake news content accurately. The system processes text data, extracts meaningful features, and applies classification algorithms to determine credibility.",
     tech: ["Python", "Machine Learning", "NLP", "Flask", "Automation"],
-    github: "https://github.com/DdikshAA1/Fake-News-Detector",
+    github: "https://github.com/DdikshAA1/News_Detector",
     demo: "https://fake-news-detector-eta.vercel.app",
     gradient: "from-primary/40 via-secondary/20 to-background"
   },
