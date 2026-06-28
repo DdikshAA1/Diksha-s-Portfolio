@@ -214,6 +214,7 @@
   --glass-shadow-hover: rgba(124, 58, 237, 0.2);
 }
 
+:root, .dark {
   --app-font-sans: 'Inter', sans-serif;
   --app-font-serif: 'Space Grotesk', sans-serif;
   --app-font-mono: 'JetBrains Mono', monospace;
