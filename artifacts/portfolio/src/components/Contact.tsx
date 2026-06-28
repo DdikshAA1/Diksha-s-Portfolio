@@ -1,7 +1,16 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Send, Github, Linkedin, ExternalLink, CheckCircle, AlertCircle } from 'lucide-react';
 import { useMagneticButton } from '@/hooks/useMagneticButton';
+import emailjs from '@emailjs/browser';
+
+// ──────────────────────────────────────────────────────────
+// EmailJS configuration
+// Sign up free at https://www.emailjs.com and fill these in.
+// ──────────────────────────────────────────────────────────
+const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID  || 'YOUR_SERVICE_ID';
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID';
+const EMAILJS_PUBLIC_KEY   = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  || 'YOUR_PUBLIC_KEY';
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
@@ -26,6 +35,7 @@ export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState<Status>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,17 +43,17 @@ export default function Contact() {
     setErrorMsg('');
 
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        throw new Error(data.error || 'Something went wrong');
-      }
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: 'dikshar1123@gmail.com',
+        },
+        EMAILJS_PUBLIC_KEY
+      );
 
       setStatus('success');
       setFormData({ name: '', email: '', message: '' });
@@ -51,7 +61,7 @@ export default function Contact() {
       setTimeout(() => setStatus('idle'), 5000);
     } catch (err: any) {
       setStatus('error');
-      setErrorMsg(err.message || 'Failed to send. Please try again.');
+      setErrorMsg(err?.text || 'Failed to send. Please try again.');
       setTimeout(() => setStatus('idle'), 5000);
     }
   };
