@@ -11,29 +11,19 @@ const projects = [
     shortDesc: "Machine learning model to identify and classify fake news.",
     fullDesc: "Built a robust machine learning model using Natural Language Processing (NLP) techniques to identify and classify fake news content accurately. The system processes text data, extracts meaningful features, and applies classification algorithms to determine credibility.",
     tech: ["Python", "Machine Learning", "NLP", "Flask", "Automation"],
-    github: "https://github.com/DdikshAA1",
-    demo: null,
+    github: "https://github.com/DdikshAA1/Fake-News-Detector",
+    demo: "https://fake-news-detector-eta.vercel.app",
     gradient: "from-primary/40 via-secondary/20 to-background"
   },
   {
     id: 2,
-    title: "Data Analytics Dashboard",
-    shortDesc: "Interactive dashboard for real-time data visualization.",
-    fullDesc: "An exploratory project to visualize complex datasets. Utilizes modern web technologies to render charts and graphs that help in making data-driven decisions quickly and effectively.",
-    tech: ["JavaScript", "HTML/CSS", "Data Analytics"],
-    github: "https://github.com/DdikshAA1",
+    title: "AI-Powered Smart Investigation & Policing Assistant",
+    shortDesc: "AI-based system to support law enforcement in cyber investigations and OSINT.",
+    fullDesc: "An AI-based Smart Investigation & Policing Assistant that supports law enforcement in cyber investigations, open-source intelligence (OSINT), and data-driven policing. It uses AI and NLP to analyze public data from social media to identify suspicious activities. Features a crime pattern analysis module to predict high-risk areas, processes citizen complaints using NLP, and includes a centralized dashboard for tracking cybercrime cases and linking digital evidence.",
+    tech: ["AI", "NLP", "Machine Learning", "OSINT", "Data Analytics"],
+    github: "https://github.com/DdikshAA1/SmartInvestigation",
     demo: null,
     gradient: "from-secondary/40 via-accent/20 to-background"
-  },
-  {
-    id: 3,
-    title: "AI Chatbot Interface",
-    shortDesc: "Conversational interface powered by prompt engineering.",
-    fullDesc: "A sleek, responsive chat interface demonstrating advanced prompt engineering techniques to generate accurate, context-aware responses from language models.",
-    tech: ["Python", "Prompt Engineering", "API Integration"],
-    github: "https://github.com/DdikshAA1",
-    demo: null,
-    gradient: "from-accent/40 via-primary/20 to-background"
   }
 ];
 
